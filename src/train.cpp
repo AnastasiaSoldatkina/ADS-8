@@ -7,7 +7,7 @@ void Train::addCage(bool light) {
   rwc->light = light;
   rwc->next = nullptr;
   rwc->prev = nullptr;
-  if (first==nullptr) {
+  if (first == nullptr) {
     first = rwc;
   } else if (first->next == nullptr) {
     first->next = rwc;
@@ -23,7 +23,7 @@ void Train::addCage(bool light) {
 }
 
 int Train::getLength() {
- Cage* cr = first;
+Cage* cr = first;
   first->light = true;
   countOp = 0;
   length = 0;
@@ -34,14 +34,15 @@ int Train::getLength() {
     cr = cr->next;
     if (cr->light) {
       cr->light = false;
-      for (length; length > 0; length--) {
+      trlen = length;
+      for (trlen; trlen > 0; trlen--) {
         cr = cr->prev;
         countOp++;
       }
       if (!cr->light) {
         return length;
-      } 
-      length =trylen;
+      }
+      length = trylen;
     }
   }
 }
