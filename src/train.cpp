@@ -28,7 +28,7 @@ Cage* cr = first;
   countOp = 0;
   length = 0;
   while (true) {
-    int trylen;
+    int trlen;
     countOp++;
     length++;
     cr = cr->next;
