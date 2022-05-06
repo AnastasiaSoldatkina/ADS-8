@@ -42,7 +42,7 @@ Cage* cr = first;
       if (!cr->light) {
         return length;
       }
-      length = trylen;
+      length = trlen;
     }
   }
 }
